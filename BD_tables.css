@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+
+
+table#pricing {
+	
+
+	border-radius: 10px;
+	background-color: black;
+	border: 5px solid gray;
+	margin-left: 50px;
+	margin-right: 50px;
+	margin-bottom: 50px;
+	margin-top: 50px;
+	
+}
+ 
+table#pricing th, table#pricing td {
+	
+	border: 3px solid gray;
+	line-height: 1.3em;
+	padding: 15px;
+	
+}
+
+table#pricing th {
+	
+	background-color: black;
+	color: rgb(192, 192, 192);
+	font-weight: normal;
+	
+}
+
+table#pricing td {
+	
+	color: rgb(192, 192, 192);
+	font-size: 1.2em;
+	vertical-align: top;
+	
+}
+
+/* Column Styles */
+
+#firstCol {
+	
+	width: 25%;
+	
+}
+
+#dataCols {
+	
+	width: 18%
+	
+}
+
+/* Table Header Styles */
+
+thead tr {
+	
+	height: 65px;
+	
+}
+
+table#pricing > thead > tr:first-of-type > th:first-of-type {
+	
+	font-size: 2.2em;
+	
+}
+
+table#pricing > thead > tr:first-of-type > th:not(:first-of-type) {
+	
+	background-color: transparent;
+	color: rgb(192, 192, 192);
+	
+}

@@ -1,0 +1,114 @@
+@charset "utf-8";
+@import url("BD_designs.css");
+
+/* Base Layout */
+body {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+header, footer {
+    width: 100%;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Bottom Navigation */
+nav#bottom {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+nav#bottom::before {
+    content: url('BD_logo.png');
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+nav#bottom ul {
+    flex: 0 1 150px;
+    text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+    nav#top ul {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+        background-color: transparent;
+    }
+
+    /* Table Adjustments */
+    table {
+        font-size: 0.9em;
+    }
+    
+    td, th {
+        padding: 8px 5px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    /* Navigation */
+    nav#top {
+		
+        font-size: 1.5em;
+        line-height: 1.8em;
+		
+    }
+    
+    nav#top a {
+		
+        all: unset;
+        color: rgb(192, 192, 192);
+        cursor: pointer;
+		
+    }
+
+    nav#top a:hover, nav#top a:active {
+		
+        color: rgb(220, 220, 220);
+		
+    }
+
+    nav#bottom::before {
+        display: none;
+    }
+
+    /* Section Layout */
+    .section {
+        grid-template-columns: 1fr !important;
+        grid-template-areas: "text" "image" !important;
+    }
+    
+    .section img {
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+        object-fit: contain;
+    }
+
+    /* Table Adjustments */
+    table {
+        font-size: 0.8em;
+    }
+    
+    td, th {
+        padding: 5px 3px;
+    }
+}
+
+
+
+
